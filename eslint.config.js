@@ -4,6 +4,7 @@ import eslint from '@eslint/js';
 import tseslint from 'typescript-eslint';
 
 // Plugins
+import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
 import reactRefresh from 'eslint-plugin-react-refresh';
 import eslintConfigPrettier from 'eslint-config-prettier';
@@ -18,17 +19,22 @@ export default tseslint.config(
     languageOptions: {
       ecmaVersion: 'latest',
       parserOptions: {
+        ecmaFeatures: {
+          jsx: true,
+        },
         project: './tsconfig.eslint.json',
         // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
         tsconfigRootDir: import.meta.dirname,
       },
     },
     plugins: {
+      react: react,
       'react-hooks': reactHooks,
       // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
       'react-refresh': reactRefresh,
     },
     rules: {
+      ...react.configs.recommended.rules,
       ...reactHooks.configs.recommended.rules,
 
       'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
