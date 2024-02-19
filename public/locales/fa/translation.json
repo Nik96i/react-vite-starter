@@ -1,5 +1,17 @@
 {
   "login": {
     "login": "ورود"
+  },
+
+  "home": {
+    "pageTitle": "خانه"
+  },
+
+  "about": {
+    "pageTitle": "درباره ما"
+  },
+
+  "profile": {
+    "pageTitle": "پروفایل"
   }
 }
