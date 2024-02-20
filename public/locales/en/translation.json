@@ -1,0 +1,17 @@
+{
+  "login": {
+    "login": "Login"
+  },
+
+  "home": {
+    "pageTitle": "Home"
+  },
+
+  "about": {
+    "pageTitle": "About"
+  },
+
+  "profile": {
+    "pageTitle": "Profile"
+  }
+}
