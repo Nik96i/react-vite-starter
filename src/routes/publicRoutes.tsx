@@ -1,30 +1,30 @@
-import AccountLayout from '@/layouts/AccountLayout.tsx';
+import AccountLayout from "@/layouts/AccountLayout.tsx";
 
 export default function publicRoutes() {
   return {
     element: <AccountLayout />,
     children: [
       {
-        path: '/',
+        path: "/",
         async lazy() {
-          const { Home } = await import('@/pages/home');
+          const { Home } = await import("@/pages/home");
           return { Component: Home };
-        },
+        }
       },
       {
-        path: '/about',
+        path: "/about",
         async lazy() {
-          const { About } = await import('@/pages/about');
+          const { About } = await import("@/pages/about");
           return { Component: About };
-        },
+        }
       },
       {
-        path: '/',
+        path: "*",
         async lazy() {
-          const { Home } = await import('@/pages/home');
+          const { Home } = await import("@/pages/home");
           return { Component: Home };
-        },
-      },
-    ],
+        }
+      }
+    ]
   };
 }
