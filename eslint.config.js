@@ -1,19 +1,24 @@
 import eslint from "@eslint/js";
 import tseslint from "typescript-eslint";
 import globals from "globals";
+import stylistic from '@stylistic/eslint-plugin'
 
 // Plugins
 // import stylistic from "@stylistic/eslint-plugin";
 import react from "eslint-plugin-react";
 import reactHooks from "eslint-plugin-react-hooks";
 import reactRefresh from "eslint-plugin-react-refresh";
-import eslintConfigPrettier from "eslint-config-prettier";
+// import eslintConfigPrettier from "eslint-config-prettier";
+
+// Custom Rules
+import stylisticRules from "./lints/stylistic/index.js";
 
 export default tseslint.config(
   eslint.configs.recommended,
   ...tseslint.configs.strictTypeChecked,
   ...tseslint.configs.stylisticTypeChecked,
-
+  stylistic.configs["recommended-flat"],
+  
   // React Plugin
   {
     files: ["**/*.{js,jsx,mjs,cjs,ts,tsx}"],
@@ -66,6 +71,22 @@ export default tseslint.config(
     }
   },
 
+  // Stylistic Rules
+  {
+    files: ["**/*.{js,jsx,mjs,cjs,ts,tsx}"],
+    languageOptions: {
+      parserOptions: {
+        ecmaFeatures: {
+          jsx: true
+        }
+      },
+      globals: {
+        ...globals.browser
+      }
+    },
+    rules: stylisticRules
+  },
+
   {
     ignores: [
       "dist",
@@ -78,5 +99,5 @@ export default tseslint.config(
     ]
   },
 
-  eslintConfigPrettier
+  // eslintConfigPrettier
 );

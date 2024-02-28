@@ -40,10 +40,13 @@ export default {
   "@stylistic/function-paren-newline": ["warn", "multiline"],
 
   // https://eslint.style/rules/default/generator-star-spacing
-  "@stylistic/generator-star-spacing": ["warn", {
-    "before": false,
-    "after": true
-  }],
+  "@stylistic/generator-star-spacing": [
+    "warn",
+    {
+      "before": false,
+      "after": true
+    }
+  ],
 
   // https://eslint.style/rules/default/implicit-arrow-linebreak
   "@stylistic/implicit-arrow-linebreak": ["warn"],
@@ -62,6 +65,76 @@ export default {
 
   // https://eslint.style/rules/default/jsx-closing-tag-location
   "@stylistic/jsx-closing-tag-location": ["warn"],
+
+  // https://eslint.style/rules/default/jsx-curly-brace-presence
+  "@stylistic/jsx-curly-brace-presence": ["warn"],
+
+  // https://eslint.style/rules/default/jsx-curly-newline
+  "@stylistic/jsx-curly-newline": ["warn"],
+
+  // https://eslint.style/rules/default/jsx-curly-spacing
+  "@stylistic/jsx-curly-spacing": ["warn"],
+
+  // https://eslint.style/rules/default/jsx-equals-spacing
+  "@stylistic/jsx-equals-spacing": ["warn"],
+
+  // https://eslint.style/rules/default/jsx-first-prop-new-line
+  "@stylistic/jsx-first-prop-new-line": ["warn"],
+
+  // https://eslint.style/rules/default/jsx-indent
+  "@stylistic/jsx-indent": ["warn", 2],
+
+  // https://eslint.style/rules/default/jsx-indent-props
+  "@stylistic/jsx-indent-props": ["warn", 2],
+
+  // https://eslint.style/rules/default/jsx-max-props-per-line
+  // "@stylistic/jsx/jsx-max-props-per-line": ["warn", 1],
+
+  // https://eslint.style/rules/default/jsx-newline
+  // "@stylistic/jsx/jsx-newline": ["warn", {prevent: false, allowMultilines: false}],
+
+  // https://eslint.style/rules/default/jsx-one-expression-per-line
+  "@stylistic/jsx-one-expression-per-line": ["warn", { allow: "single-child" }],
+
+  // https://eslint.style/rules/default/jsx-pascal-case
+  "@stylistic/jsx-pascal-case": ["warn"],
+
+  // https://eslint.style/rules/default/jsx-props-no-multi-spaces
+  "@stylistic/jsx-props-no-multi-spaces": ["warn"],
+
+  // https://eslint.style/rules/default/jsx-quotes
+  "@stylistic/jsx-quotes": ["warn"],
+
+  // https://eslint.style/rules/default/jsx-self-closing-comp
+  "@stylistic/jsx-self-closing-comp": ["warn"],
+
+  // https://eslint.style/rules/default/jsx-sort-props
+  // "@stylistic/jsx/jsx-sort-props": ["warn"],
+
+  // https://eslint.style/rules/default/jsx-tag-spacing
+  "@stylistic/jsx-tag-spacing": [
+    "warn",
+    {
+      closingSlash: "never",
+      beforeSelfClosing: "always",
+      afterOpening: "never",
+      beforeClosing: "never"
+    }
+  ],
+
+  // https://eslint.style/rules/default/jsx-wrap-multilines
+  "@stylistic/jsx-wrap-multilines": [
+    "warn",
+    {
+      declaration: "parens",
+      assignment: "parens",
+      return: "parens",
+      arrow: "parens",
+      condition: "parens-new-line",
+      logical: "parens-new-line",
+      prop: "parens-new-line"
+    }
+  ],
 
   // https://eslint.style/rules/js/key-spacing
   "@stylistic/key-spacing": "warn",
@@ -87,28 +160,31 @@ export default {
   ],
 
   // https://eslint.style/rules/js/lines-between-class-members
-  "@stylistic/lines-between-class-members": ["warn", {
-    "enforce": [
-      {
-        "blankLine": "never",
-        "prev": "field",
-        "next": "field"
-      },
-      {
-        "blankLine": "always",
-        "prev": "*",
-        "next": "method"
-      },
-      {
-        "blankLine": "always",
-        "prev": "method",
-        "next": "*"
-      }
-    ]
-  }],
+  "@stylistic/lines-between-class-members": [
+    "warn",
+    {
+      "enforce": [
+        {
+          "blankLine": "never",
+          "prev": "field",
+          "next": "field"
+        },
+        {
+          "blankLine": "always",
+          "prev": "*",
+          "next": "method"
+        },
+        {
+          "blankLine": "always",
+          "prev": "method",
+          "next": "*"
+        }
+      ]
+    }
+  ],
 
   // https://eslint.style/rules/default/max-len
-  "@stylistic/max-len": ["warn", {"code": 120}],
+  "@stylistic/max-len": ["warn", { "code": 120 }],
 
   // https://eslint.style/rules/default/max-statements-per-line
   "@stylistic/max-statements-per-line": "warn",
@@ -159,7 +235,7 @@ export default {
   "@stylistic/nonblock-statement-body-position": "warn",
 
   // https://eslint.style/rules/default/object-curly-newline
-  "@stylistic/object-curly-newline": ["warn", {"multiline": true}],
+  "@stylistic/object-curly-newline": ["warn", { "multiline": true }],
 
   // https://eslint.style/rules/js/object-curly-spacing
   "@stylistic/object-curly-spacing": ["warn", "never"],
@@ -174,7 +250,8 @@ export default {
   "@stylistic/padded-blocks": ["warn", "never"],
 
   // https://eslint.style/rules/ts/padding-line-between-statements
-  "@stylistic/padding-line-between-statements": ["warn",
+  "@stylistic/padding-line-between-statements": [
+    "warn",
     {
       "blankLine": "always",
       "prev": "*",
@@ -249,11 +326,14 @@ export default {
   "@stylistic/space-before-blocks": ["warn", "always"],
 
   // https://eslint.style/rules/js/space-before-function-paren
-  "@stylistic/space-before-function-paren": ["warn", {
-    "anonymous": "always",
-    "named": "never",
-    "asyncArrow": "always"
-  }],
+  "@stylistic/space-before-function-paren": [
+    "warn",
+    {
+      "anonymous": "always",
+      "named": "never",
+      "asyncArrow": "always"
+    }
+  ],
 
   // https://eslint.style/rules/default/space-in-parens
   "@stylistic/space-in-parens": ["warn"],
