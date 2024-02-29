@@ -151,7 +151,7 @@ export default {
 
   // https://eslint.style/rules/default/jsx-sort-props
   // Enforce props alphabetical sorting
-  "@stylistic/jsx/jsx-sort-props": ["warn", {
+  "@stylistic/jsx-sort-props": ["warn", {
     callbacksLast: true,
     shorthandFirst: true,
     // shorthandLast: false,
